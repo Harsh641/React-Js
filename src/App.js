@@ -1,19 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
-import { Demo1 } from './MyComponents/Demo1';
-
-function demo(){
-  return Demo1
-}
+import { Employee } from './MyComponents/Employee';
+import {Header} from './MyComponents/Header';
+import { EmployeeList } from './MyComponents/EmployeeList';
+import { Footer } from './MyComponents/Footer';
 
 function App() {
-  const name = "Harsh";
-  const d = new Date();
+  const title = "Employee Management System";
+  
+  const empList = [
+    {
+      eid:1001,
+      eName:"Harsh",
+      eEmail:"harsh@gmail.com",
+      eSalary:250000
+    },
+    {
+      eid:1002,
+      eName:"h@rsh",
+      eEmail:"harsh@gmail.com",
+      eSalary:250000
+    },
+    {
+      eid:1003,
+      eName:"harsh123",
+      eEmail:"harsh@gmail.com",
+      eSalary:250000
+    }
+  ]
+
   return (
     <>
-    <h1>Welcome, {name}</h1>
-    <h1>Date: {d}</h1>
-    <Demo1/>
+      <Header title = {title} searchBar={true}></Header>
+      <EmployeeList empList={empList}></EmployeeList>
+      <Footer></Footer>
     </>
   );
 }
