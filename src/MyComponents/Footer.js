@@ -9,7 +9,7 @@ export const Footer = () => {
 
     return (
         <footer className="bg-dark text-light py-3" style={footerStyle}>
-            <p className="container-fluid bg-12">
+            <p className="container-fluid">
                 CopyRight &copy; Harsh Joshi, 2021
             </p>
         </footer>
